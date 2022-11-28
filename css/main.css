@@ -1147,14 +1147,14 @@ button {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .footer-modal-label {
     padding-left: 166px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .footer-modal-label {
-    padding-left: 166px;
+    padding-left: 0;
   }
 }
 
@@ -1199,6 +1199,46 @@ button {
   align-items: center;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .footer-modal-input {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    outline: transparent;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.25;
+    padding-left: 16px;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .footer-modal-input::-moz-placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+  }
+  .footer-modal-input:-ms-input-placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+  }
+  .footer-modal-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-modal-input {

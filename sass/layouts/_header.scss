@@ -6,13 +6,19 @@
 
 }
 .header__container{
+    display: flex;
+@media screen and (min-width:480px) {
     height: 60px;
     display: flex;
-    align-items: center; 
-    @media screen and (min-width:768px) {
+    align-items: center;
+    }
+   
+@media screen and (min-width:768px) {
     height: 80px;
-    margin-left: 93px;
         }
+ @media screen and (min-width:1200px) {
+     display: block;
+ }
 }
 
 .header__logo {
@@ -26,13 +32,13 @@
     text-decoration: none;
 
 @media screen and (min-width:768px) {
-        font-size: 24px;
-        line-height: calc(28/24);
+    font-size: 24px;
+    line-height: calc(28/24);
     }
 
 @media screen and (min-width:1200px) {
-        font-size: 26px;
-        line-height: 1.19;
+    font-size: 26px;
+    line-height: 1.19;
     }
   
 }
@@ -42,24 +48,28 @@
 }
 
 .main-nav {
-@media screen and (max-width:767px) {
-    display: none;
-}
-@media screen and (min-width:768px) {
     display: flex;
     align-items: center;
-}
 
 }
 
 .site-nav{
-display: flex;
-gap: 50px;
+    overflow: hidden;
+    display: none;
+@media screen and (min-width:768px) {
+    display: flex;
+    margin-left: 88px;
+    }
+
+@media screen and (min-width:1200px) {
+    gap: 53px;
+    margin-right: auto;
+    }
 }
 
 
-.site-nav__item +.site-nav__item,
-.auto-nav__item +.auto-nav__item {
+.site-nav__item +.site-nav__item
+ {
     margin-left: 50px;
 }
 
@@ -101,30 +111,48 @@ gap: 50px;
     background: var(--accent-color);
 }
 
-.auto-nav {
-@media screen and (max-width:767px) {
+.auto-nav{
     display: none;
-        
-    }
-
-@media screen and (min-width:768px) {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    color: var(--title-text-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: auto;
+    
+@media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
-    
         }
- @media screen and (min-width:1200px) {
-     margin-left: auto;
-     flex-direction: row;
-     gap: 30px;
-     align-items: center;
- }
+    
+ @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    font-size: 14px;
+        }
 }
 
+
 .auto-nav__link {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+   
+    display: flex;
+    
+  
+    
+    @media screen and (min-width:1200px) {
+            display: block;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    
+   
 
     color: var(--title-text-color);
     font-weight: 500;
